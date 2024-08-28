@@ -1,14 +1,23 @@
-# Use the specified base image
+# Use an official Python runtime as a parent image
 FROM cnstark/pytorch:2.0.1-py3.10.11-ubuntu22.04
 
-# Set working directory
+# Set environment variables
+ENV BASE_DIR=/data/base_dir
+ENV MODEL_WEIGHTS_PATH=/data/model_weights.pth
+
+# Set the working directory
 WORKDIR /app
 
-# Copy the Python script into the container
-COPY main.py .
+# Install nano and other necessary utilities
+RUN apt-get update && \
+    apt-get install -y nano && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install any additional Python packages if needed
-RUN pip install numpy
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Set the default command to execute the Python script
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run main.py when the container launches
 CMD ["python", "main.py"]
