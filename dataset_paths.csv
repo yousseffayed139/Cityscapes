@@ -1,0 +1,5 @@
+image_path,mask_path
+/home/youssef/Projects/CityScape/Mount/base_dir/Images/ulm/ulm_000000_000019_leftImg8bit.png,/home/youssef/Projects/CityScape/Mount/base_dir/GroundTruth/ulm/ulm_000000_000019_gtFine_labelTrainIds.png
+/home/youssef/Projects/CityScape/Mount/base_dir/Images/ulm/ulm_000002_000019_leftImg8bit.png,/home/youssef/Projects/CityScape/Mount/base_dir/GroundTruth/ulm/ulm_000002_000019_gtFine_labelTrainIds.png
+/home/youssef/Projects/CityScape/Mount/base_dir/Images/ulm/ulm_000001_000019_leftImg8bit.png,/home/youssef/Projects/CityScape/Mount/base_dir/GroundTruth/ulm/ulm_000001_000019_gtFine_labelTrainIds.png
+/home/youssef/Projects/CityScape/Mount/base_dir/Images/ulm/ulm_000003_000019_leftImg8bit.png,/home/youssef/Projects/CityScape/Mount/base_dir/GroundTruth/ulm/ulm_000003_000019_gtFine_labelTrainIds.png

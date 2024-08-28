@@ -8,8 +8,10 @@ def collect_image_paths(base_dir):
     :param base_dir: Base directory containing 'images' and 'gtFine' subdirectories.
     :return: List of tuples containing image and mask paths.
     """
-    image_dir = os.path.join(base_dir, 'images')
-    mask_dir = os.path.join(base_dir, 'gtFine')
+    image_dir = os.path.join(base_dir, 'Images')
+    mask_dir = os.path.join(base_dir, 'GroundTruth')
+    # image_dir="/home/youssef/Projects/CityScape/Mount/base_dir/Images"
+    # mask_dir="/home/youssef/Projects/CityScape/Mount/base_dir/GroundTruth"
     
     image_paths = []
     mask_paths = []
