@@ -137,7 +137,7 @@ def main():
 
                 # Save combined image
                 save_combined_image(pred_image_colored, gt_image_colored, 
-                                    f'Output/combined_{i}_{j}.png')
+                                    f'/Output/combined_{i}_{j}.png')
 
     # Calculate and print mean IoU over all batches
     mean_iou = total_iou / max(num_batches, 1)

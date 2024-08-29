@@ -8,23 +8,18 @@ ENV MODEL_WEIGHTS_PATH=/data/model_weights.pth
 # Set the working directory
 WORKDIR /app
 
+# Install system dependencies
 RUN apt-get update && \
     apt-get install -y \
     libgl1-mesa-glx \
-    libglib2.0-0 \ 
+    libglib2.0-0 \
+    nano && \
     # Clean up to reduce image size
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install nano and other necessary utilities
-RUN apt-get update && \
-    apt-get install -y nano && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the current directory contents into the container at /app
 COPY . /app
- 
-COPY requirements.txt /app/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt --timeout 120
